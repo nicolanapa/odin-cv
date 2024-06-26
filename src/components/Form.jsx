@@ -15,12 +15,14 @@ function SingleForm({ list }) {
 		<section className="form">
 			<h2>{list.header}</h2>
 
-			<div>{completeList}</div>
-			<div>
+			{/* use preventDefault()*/}
+			<form>
+				{completeList}
+
 				<button>
 					<img className="submitIcon" src="./submit.svg" alt="Submit" />
 				</button>
-			</div>
+			</form>
 		</section>
 	);
 }
