@@ -1,13 +1,13 @@
-import React from "react";
+import React, { Fragment } from "react";
 
 function SingleForm({ list }) {
 	let completeList = [];
 	for (let i = 0; i < list.id.length; i++) {
 		completeList.push(
-			<>
+			<Fragment key={list.id[i]}>
 				<label htmlFor={list.id[i]}>{list.label[i]}</label>
 				<input type={list.type[i]} id={list.id[i]} />
-			</>
+			</Fragment>
 		);
 	}
 
@@ -32,6 +32,7 @@ function Personal() {
 
 	return (
 		<>
+			<h2>Personal</h2>
 			<SingleForm list={person} />
 		</>
 	);
@@ -46,6 +47,7 @@ function Educational() {
 
 	return (
 		<>
+			<h2>Education</h2>
 			<SingleForm list={education} />
 		</>
 	);
@@ -60,6 +62,7 @@ function Practical() {
 
 	return (
 		<>
+			<h2>Practic || Work</h2>
 			<SingleForm list={practic} />
 		</>
 	);
