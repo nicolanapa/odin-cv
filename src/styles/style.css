@@ -2,11 +2,11 @@
 
 @keyframes rotatore {
 	from {
-		transform: rotate(0.4turn);
+		transform: rotate(0.45turn);
 	}
 
 	to {
-		transform: rotate(0.6turn);
+		transform: rotate(0.55turn);
 	}
 }
 
@@ -27,6 +27,6 @@ button {
 .submitIcon {
 	width: 30px;
 	height: 30px;
-	transform: rotate(0.4turn);
-	animation: rotatore 8s 1s ease-in-out infinite alternate;
+	transform: rotate(0.45turn);
+	animation: rotatore 6s 1s ease-in-out infinite alternate;
 }
