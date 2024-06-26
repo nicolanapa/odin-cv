@@ -1,18 +1,19 @@
 import React from "react";
 
-function SingleForm({ element }) {
+function SingleForm({ list }) {
+	let completeList = [];
+	for (let i = 0; i < list.id.length; i++) {
+		completeList.push(
+			<>
+				<label htmlFor={list.id[i]}>{list.label[i]}</label>
+				<input type={list.type[i]} id={list.id[i]} />
+			</>
+		);
+	}
+
 	return (
 		<section className="form">
-			<div>
-				<label htmlFor={element.id[0]}>{element.label[0]}</label>
-				<input type={element.type[0]} id={element.id[0]} />
-
-				<label htmlFor={element.id[1]}>{element.label[1]}</label>
-				<input type={element.type} id={element.id[1]} />
-
-				<label htmlFor={element.id[2]}>{element.label[2]}</label>
-				<input type={element.type[2]} id={element.id[2]} />
-			</div>
+			<div>{completeList}</div>
 			<div>
 				<button>
 					<img className="submitIcon" src="./submit.svg" alt="Submit" />
@@ -31,7 +32,7 @@ function Personal() {
 
 	return (
 		<>
-			<SingleForm element={person} />
+			<SingleForm list={person} />
 		</>
 	);
 }
@@ -45,7 +46,7 @@ function Educational() {
 
 	return (
 		<>
-			<SingleForm element={education} />
+			<SingleForm list={education} />
 		</>
 	);
 }
@@ -59,7 +60,7 @@ function Practical() {
 
 	return (
 		<>
-			<SingleForm element={practic} />
+			<SingleForm list={practic} />
 		</>
 	);
 }
