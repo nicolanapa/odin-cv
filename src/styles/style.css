@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
+@keyframes rotatore {
+	from {
+		transform: rotate(0.4turn);
+	}
+
+	to {
+		transform: rotate(0.6turn);
+	}
+}
+
 * {
 	font-family: "Raleway";
 	padding: 0;
@@ -17,5 +27,6 @@ button {
 .submitIcon {
 	width: 30px;
 	height: 30px;
-	transform: rotate(0.3turn);
+	transform: rotate(0.4turn);
+	animation: rotatore 8s 1s ease-in-out infinite alternate;
 }
