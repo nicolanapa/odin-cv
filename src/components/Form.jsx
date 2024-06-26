@@ -2,7 +2,7 @@ import React from "react";
 
 function SingleForm({ element }) {
 	return (
-		<section>
+		<section className="form">
 			<div>
 				<label htmlFor={element.id[0]}>{element.label[0]}</label>
 				<input type={element.type[0]} id={element.id[0]} />
@@ -36,9 +36,33 @@ function Personal() {
 	);
 }
 
-function Educational() {}
+function Educational() {
+	const education = {
+		id: ["school", "study", "dateStudy"],
+		label: ["School Name ", "Study ", "Date of Study "],
+		type: ["text", "text", "date"],
+	};
 
-function Practical() {}
+	return (
+		<>
+			<SingleForm element={education} />
+		</>
+	);
+}
+
+function Practical() {
+	const practic = {
+		id: ["company", "position", "responsibilities", "dateWork"],
+		label: ["Company Name ", "Position ", "Responsibilities ", "Date From-Until "],
+		type: ["text", "text", "date", "date"],
+	};
+
+	return (
+		<>
+			<SingleForm element={practic} />
+		</>
+	);
+}
 
 function Form() {
 	return (
