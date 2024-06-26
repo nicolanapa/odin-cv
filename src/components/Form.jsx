@@ -1,11 +1,7 @@
 import React from "react";
 
 function Form() {
-	return (
-		<>
-			<div></div>
-		</>
-	);
+	return <div></div>;
 }
 
 export { Form };
