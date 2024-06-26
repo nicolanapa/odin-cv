@@ -13,6 +13,8 @@ function SingleForm({ list }) {
 
 	return (
 		<section className="form">
+			<h2>{list.header}</h2>
+
 			<div>{completeList}</div>
 			<div>
 				<button>
@@ -28,11 +30,11 @@ function Personal() {
 		id: ["name", "email", "phone"],
 		label: ["Name ", "Email ", "Phone Number "],
 		type: ["text", "text", "tel"],
+		header: "Personal",
 	};
 
 	return (
 		<>
-			<h2>Personal</h2>
 			<SingleForm list={person} />
 		</>
 	);
@@ -43,11 +45,11 @@ function Educational() {
 		id: ["school", "study", "dateStudy"],
 		label: ["School Name ", "Study ", "Date of Study "],
 		type: ["text", "text", "date"],
+		header: "Education",
 	};
 
 	return (
 		<>
-			<h2>Education</h2>
 			<SingleForm list={education} />
 		</>
 	);
@@ -58,11 +60,11 @@ function Practical() {
 		id: ["company", "position", "responsibilities", "dateWork"],
 		label: ["Company Name ", "Position ", "Responsibilities ", "Date From-Until "],
 		type: ["text", "text", "date", "date"],
+		header: "Practic || Work",
 	};
 
 	return (
 		<>
-			<h2>Practic || Work</h2>
 			<SingleForm list={practic} />
 		</>
 	);
