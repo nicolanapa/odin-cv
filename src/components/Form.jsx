@@ -1,16 +1,23 @@
 import React from "react";
 
-function SingleForm(props) {
+function SingleForm({ element }) {
 	return (
 		<section>
-			<label htmlFor={props.id[0]}>{props.label[0]}</label>
-			<input type={props.type[0]} id={props.id[0]} />
+			<div>
+				<label htmlFor={element.id[0]}>{element.label[0]}</label>
+				<input type={element.type[0]} id={element.id[0]} />
 
-			<label htmlFor={props.id[1]}>{props.label[1]}</label>
-			<input type={props.type} id={props.id[1]} />
+				<label htmlFor={element.id[1]}>{element.label[1]}</label>
+				<input type={element.type} id={element.id[1]} />
 
-			<label htmlFor={props.id[2]}>{props.label[2]}</label>
-			<input type={props.type[2]} id={props.id[2]} />
+				<label htmlFor={element.id[2]}>{element.label[2]}</label>
+				<input type={element.type[2]} id={element.id[2]} />
+			</div>
+			<div>
+				<button>
+					<img className="submitIcon" src="./submit.svg" alt="Submit" />
+				</button>
+			</div>
 		</section>
 	);
 }
@@ -21,6 +28,12 @@ function Personal() {
 		label: ["Name ", "Email ", "Phone Number "],
 		type: ["text", "text", "tel"],
 	};
+
+	return (
+		<>
+			<SingleForm element={person} />
+		</>
+	);
 }
 
 function Educational() {}
