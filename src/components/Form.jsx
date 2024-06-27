@@ -59,9 +59,9 @@ function Educational() {
 
 function Practical() {
 	const practic = {
-		id: ["company", "position", "responsibilities", "dateWork"],
-		label: ["Company Name ", "Position ", "Responsibilities ", "Date From-Until "],
-		type: ["text", "text", "date", "date"],
+		id: ["company", "position", "responsibilities", "dateWorkStart", "dateWorkEnd"],
+		label: ["Company Name ", "Position ", "Responsibilities ", "Start", "End"],
+		type: ["text", "text", "text", "date", "date"],
 		header: "Practic || Work",
 	};
 
