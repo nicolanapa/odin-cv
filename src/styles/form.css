@@ -1,3 +1,26 @@
+.full-form {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	gap: 70px;
+}
+
 .form {
-    
+}
+
+.form > form {
+	display: flex;
+	flex-direction: column;
+}
+
+.form > form > button {
+    justify-self: flex-end;
+	align-self: flex-start;
+}
+
+.form > form > input {
+	max-width: 250px;
+	margin: 2.5px 0 5px 10px;
+	padding: 8px 10px;
+	border: 2px solid rgb(228, 228, 228);
+	border-radius: 15px;
 }
