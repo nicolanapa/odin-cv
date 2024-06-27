@@ -16,6 +16,15 @@
 	margin: 0;
 }
 
+h1 {
+	display: flex;
+	justify-content: center;
+	margin: 20px;
+	font-size: 28px;
+	font-weight: 500;
+	font-style: italic;
+}
+
 button {
 	background-color: rgb(255, 230, 242);
 	border: none;
