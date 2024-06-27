@@ -74,7 +74,7 @@ function Practical() {
 
 function Form() {
 	return (
-		<div>
+		<div className="full-form">
 			<Personal />
 			<Educational />
 			<Practical />
