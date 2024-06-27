@@ -7,6 +7,7 @@ import { Cv } from "./components/Cv.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
 	<React.StrictMode>
+		<h1>CV Application</h1>
 		<Form />
 		<Cv />
 	</React.StrictMode>
