@@ -32,6 +32,11 @@ function PracticSubmit(e) {
 	e.preventDefault();
 	console.log("Practic");
 	let allValues = inputTaker(idList);
+
+	if (Date.parse(allValues.dateWorkStart) > Date.parse(allValues.dateWorkEnd)) {
+		alert("Ending Date is less than Start Date of Work. Please retry");
+		return 0;
+	}
 }
 
 export { PersonSubmit, EducationSubmit, PracticSubmit };
