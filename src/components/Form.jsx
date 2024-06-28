@@ -31,7 +31,7 @@ function SingleForm({ list, variableToCall }) {
 function Personal() {
 	const person = {
 		id: ["name", "email", "phone"],
-		label: ["Name ", "Email ", "Phone Number "],
+		label: ["Name (ex: John Smith) ", "Email (ex: example@dot.com) ", "Phone Number (ex: +39 123 345 5678) "],
 		type: ["text", "email", "tel"],
 		header: "Personal",
 	};
@@ -48,7 +48,7 @@ function Personal() {
 function Educational() {
 	const education = {
 		id: ["school", "study", "dateStudy"],
-		label: ["School Name ", "Study ", "Date of Study "],
+		label: ["School Name (ex: Whinchester) ", "Study (ex: IT) ", "Date of Study "],
 		type: ["text", "text", "date"],
 		header: "Education",
 	};
@@ -65,7 +65,7 @@ function Educational() {
 function Practical() {
 	const practic = {
 		id: ["company", "position", "responsibilities", "dateWorkStart", "dateWorkEnd"],
-		label: ["Company Name ", "Position ", "Responsibilities ", "Start", "End"],
+		label: ["Company Name (ex: Google) ", "Position (ex: Developer) ", "Responsibilities (ex: X and Y) ", "Start", "End"],
 		type: ["text", "text", "text", "date", "date"],
 		header: "Practic || Work",
 	};
