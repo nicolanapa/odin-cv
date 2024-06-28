@@ -1,9 +1,13 @@
 import React from "react";
 
 function inputTaker(idList) {
+	let allValues = {};
+
 	for (let i = 0; i < idList.length; i++) {
-		console.log(i);
+		allValues[String(idList[i])] = document.querySelector("#" + idList[i]).value;
 	}
+
+	return allValues;
 }
 
 function PersonSubmit(e) {
@@ -11,7 +15,7 @@ function PersonSubmit(e) {
 
 	e.preventDefault();
 	console.log("Person");
-	inputTaker(idList);
+	let allValues = inputTaker(idList);
 }
 
 function EducationSubmit(e) {
@@ -19,7 +23,7 @@ function EducationSubmit(e) {
 
 	e.preventDefault();
 	console.log("Education");
-	inputTaker(idList);
+	let allValues = inputTaker(idList);
 }
 
 function PracticSubmit(e) {
@@ -27,7 +31,7 @@ function PracticSubmit(e) {
 
 	e.preventDefault();
 	console.log("Practic");
-	inputTaker(idList);
+	let allValues = inputTaker(idList);
 }
 
 export { PersonSubmit, EducationSubmit, PracticSubmit };
