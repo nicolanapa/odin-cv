@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
+import { PersonSubmit, EducationSubmit, PracticSubmit } from "./Submit.jsx";
 
-function SingleForm({ list }) {
+function SingleForm({ list, variableToCall }) {
 	let completeList = [];
 	for (let i = 0; i < list.id.length; i++) {
 		completeList.push(
@@ -16,7 +17,7 @@ function SingleForm({ list }) {
 			<h2>{list.header}</h2>
 
 			{/* use preventDefault()*/}
-			<form>
+			<form onSubmit={variableToCall}>
 				{completeList}
 
 				<button>
@@ -35,9 +36,11 @@ function Personal() {
 		header: "Personal",
 	};
 
+	const variableToCall = PersonSubmit;
+
 	return (
 		<>
-			<SingleForm list={person} />
+			<SingleForm list={person} variableToCall={variableToCall} />
 		</>
 	);
 }
@@ -50,9 +53,11 @@ function Educational() {
 		header: "Education",
 	};
 
+	const variableToCall = EducationSubmit;
+
 	return (
 		<>
-			<SingleForm list={education} />
+			<SingleForm list={education} variableToCall={variableToCall} />
 		</>
 	);
 }
@@ -65,9 +70,11 @@ function Practical() {
 		header: "Practic || Work",
 	};
 
+	const variableToCall = PracticSubmit;
+
 	return (
 		<>
-			<SingleForm list={practic} />
+			<SingleForm list={practic} variableToCall={variableToCall} />
 		</>
 	);
 }
