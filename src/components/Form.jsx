@@ -32,7 +32,7 @@ function Personal() {
 	const person = {
 		id: ["name", "email", "phone"],
 		label: ["Name ", "Email ", "Phone Number "],
-		type: ["text", "text", "tel"],
+		type: ["text", "email", "tel"],
 		header: "Personal",
 	};
 
