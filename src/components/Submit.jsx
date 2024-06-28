@@ -1,12 +1,17 @@
 import React from "react";
 
-function inputTaker(idList) {}
+function inputTaker(idList) {
+	for (let i = 0; i < idList.length; i++) {
+		console.log(i);
+	}
+}
 
 function PersonSubmit(e) {
 	const idList = ["name", "email", "phone"];
 
 	e.preventDefault();
 	console.log("Person");
+	inputTaker(idList);
 }
 
 function EducationSubmit(e) {
@@ -14,6 +19,7 @@ function EducationSubmit(e) {
 
 	e.preventDefault();
 	console.log("Education");
+	inputTaker(idList);
 }
 
 function PracticSubmit(e) {
@@ -21,6 +27,7 @@ function PracticSubmit(e) {
 
 	e.preventDefault();
 	console.log("Practic");
+	inputTaker(idList);
 }
 
 export { PersonSubmit, EducationSubmit, PracticSubmit };
