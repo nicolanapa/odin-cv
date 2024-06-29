@@ -22,6 +22,8 @@ function inputShowing(allValues, whereToReturn) {
 	createRoot(whereToReturn).render(<div>1</div>);
 }
 
+// Create three functions similar to inputShowing but for each Section
+
 function PersonSubmit(e) {
 	const idList = ["name", "email", "phone"];
 

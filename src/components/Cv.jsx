@@ -1,5 +1,7 @@
 import React from "react";
 
+// Use state for input values variables
+
 function Cv() {
 	return (
 		<div>
