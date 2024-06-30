@@ -1,5 +1,7 @@
 import React from "react";
-//state
+
+// Change h3 / p to input and maybe add little labels
+
 function ShowingPerson(props) {
 	return (
 		<>
