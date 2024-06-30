@@ -17,7 +17,7 @@ function ShowingEducation(props) {
 	return (
 		<>
 			<h2>Education</h2>
-			<h2 className="centered">{props.educationValues.school}</h2>
+			<h3 className="centered">{props.educationValues.school}</h3>
 			<div className="at-the-angles">
 				<h3>{props.educationValues.study}</h3>
 				<p>{props.educationValues.dateStudy}</p>
@@ -31,7 +31,7 @@ function ShowingPractic(props) {
 		<>
 			<h2>Jobs</h2>
 			<div className="at-the-angles">
-				<h2>{props.practicValues.company}</h2>
+				<h3>{props.practicValues.company}</h3>
 				<div className="centered">
 					<p>{props.practicValues.dateWorkStart}</p>
 					<p>{props.practicValues.dateWorkEnd}</p>
