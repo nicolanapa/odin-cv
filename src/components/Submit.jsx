@@ -1,5 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
+import { ShowingPerson, ShowingEducation, ShowingPractic } from "./Showing.jsx";
 
 function inputTaker(idList) {
 	let allValues = {};
@@ -31,7 +32,8 @@ function PersonSubmit(e) {
 	console.log("Person");
 	let allValues = inputTaker(idList);
 	console.log(allValues);
-	inputShowing(allValues, "person");
+
+	ShowingPerson(allValues);
 }
 
 function EducationSubmit(e) {
@@ -40,6 +42,8 @@ function EducationSubmit(e) {
 	e.preventDefault();
 	console.log("Education");
 	let allValues = inputTaker(idList);
+
+	ShowingEducation(allValues);
 }
 
 function PracticSubmit(e) {
@@ -53,6 +57,8 @@ function PracticSubmit(e) {
 		alert("Ending Date is less than Start Date of Work. Please retry");
 		return 0;
 	}
+
+	return ShowingPractic(allValues);
 }
 
 export { PersonSubmit, EducationSubmit, PracticSubmit };
