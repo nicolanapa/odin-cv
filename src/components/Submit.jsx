@@ -1,6 +1,5 @@
 import React from "react";
-import { createRoot } from "react-dom/client";
-import { ShowingPerson, ShowingEducation, ShowingPractic } from "./Showing.jsx";
+//import { createRoot } from "react-dom/client";
 
 function inputTaker(idList) {
 	let allValues = {};
@@ -12,7 +11,7 @@ function inputTaker(idList) {
 	return allValues;
 }
 
-function inputShowing(allValues, whereToReturn) {
+/*function inputShowing(allValues, whereToReturn) {
 	whereToReturn = document.querySelector("." + whereToReturn);
 
 	for (const [key, value] of Object.entries(allValues)) {
@@ -21,11 +20,9 @@ function inputShowing(allValues, whereToReturn) {
 	}
 
 	createRoot(whereToReturn).render(<div>1</div>);
-}
+}*/
 
-// Create three functions similar to inputShowing but for each Section
-
-function PersonSubmit(e) {
+function PersonSubmit(e, props) {
 	const idList = ["name", "email", "phone"];
 
 	e.preventDefault();
@@ -33,20 +30,21 @@ function PersonSubmit(e) {
 	let allValues = inputTaker(idList);
 	console.log(allValues);
 
-	ShowingPerson(allValues);
+	props.setPersonValues(allValues);
 }
 
-function EducationSubmit(e) {
+function EducationSubmit(e, props) {
 	const idList = ["school", "study", "dateStudy"];
 
 	e.preventDefault();
 	console.log("Education");
 	let allValues = inputTaker(idList);
+	console.log(allValues);
 
-	ShowingEducation(allValues);
+	props.setEducationValues(allValues);
 }
 
-function PracticSubmit(e) {
+function PracticSubmit(e, props) {
 	const idList = ["company", "position", "responsibilities", "dateWorkStart", "dateWorkEnd"];
 
 	e.preventDefault();
@@ -57,8 +55,9 @@ function PracticSubmit(e) {
 		alert("Ending Date is less than Start Date of Work. Please retry");
 		return 0;
 	}
+	console.log(allValues);
 
-	return ShowingPractic(allValues);
+	props.setPracticValues(allValues);
 }
 
 export { PersonSubmit, EducationSubmit, PracticSubmit };

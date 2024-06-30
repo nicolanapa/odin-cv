@@ -3,17 +3,17 @@ import { ShowingPerson, ShowingEducation, ShowingPractic } from "./Showing.jsx";
 
 // Use state for input values variables
 
-function Cv() {
+function Cv(props) {
 	return (
 		<div>
 			<section className="person">
-				<ShowingPerson />
+				<ShowingPerson  {...props}/>
 			</section>
 			<section className="education">
-				<ShowingEducation />
+				<ShowingEducation  {...props}/>
 			</section>
 			<section className="practic">
-				<ShowingPractic />
+				<ShowingPractic  {...props}/>
 			</section>
 		</div>
 	);

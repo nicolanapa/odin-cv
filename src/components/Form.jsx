@@ -1,23 +1,22 @@
 import React, { Fragment } from "react";
 import { PersonSubmit, EducationSubmit, PracticSubmit } from "./Submit.jsx";
 
-function SingleForm({ list, variableToCall }) {
+function SingleForm(props) {
 	let completeList = [];
-	for (let i = 0; i < list.id.length; i++) {
+	for (let i = 0; i < props.list.id.length; i++) {
 		completeList.push(
-			<Fragment key={list.id[i]}>
-				<label htmlFor={list.id[i]}>{list.label[i]}</label>
-				<input type={list.type[i]} id={list.id[i]} />
+			<Fragment key={props.list.id[i]}>
+				<label htmlFor={props.list.id[i]}>{props.list.label[i]}</label>
+				<input type={props.list.type[i]} id={props.list.id[i]} />
 			</Fragment>
 		);
 	}
 
 	return (
 		<section className="form">
-			<h2>{list.header}</h2>
+			<h2>{props.list.header}</h2>
 
-			{/* use preventDefault()*/}
-			<form onSubmit={variableToCall}>
+			<form onSubmit={props.variableToCall}>
 				{completeList}
 
 				<button>
@@ -28,7 +27,7 @@ function SingleForm({ list, variableToCall }) {
 	);
 }
 
-function Personal() {
+function Personal(props) {
 	const person = {
 		id: ["name", "email", "phone"],
 		label: ["Name (ex: John Smith) ", "Email (ex: example@dot.com) ", "Phone Number (ex: +39 123 345 5678) "],
@@ -40,12 +39,12 @@ function Personal() {
 
 	return (
 		<>
-			<SingleForm list={person} variableToCall={variableToCall} />
+			<SingleForm list={person} variableToCall={variableToCall} {...props} />
 		</>
 	);
 }
 
-function Educational() {
+function Educational(props) {
 	const education = {
 		id: ["school", "study", "dateStudy"],
 		label: ["School Name (ex: Whinchester) ", "Study (ex: IT) ", "Date of Study "],
@@ -57,12 +56,12 @@ function Educational() {
 
 	return (
 		<>
-			<SingleForm list={education} variableToCall={variableToCall} />
+			<SingleForm list={education} variableToCall={variableToCall} {...props} />
 		</>
 	);
 }
 
-function Practical() {
+function Practical(props) {
 	const practic = {
 		id: ["company", "position", "responsibilities", "dateWorkStart", "dateWorkEnd"],
 		label: ["Company Name (ex: Google) ", "Position (ex: Developer) ", "Responsibilities (ex: X and Y) ", "Start", "End"],
@@ -74,17 +73,17 @@ function Practical() {
 
 	return (
 		<>
-			<SingleForm list={practic} variableToCall={variableToCall} />
+			<SingleForm list={practic} variableToCall={variableToCall} {...props} />
 		</>
 	);
 }
 
-function Form() {
+function Form(props) {
 	return (
 		<div className="full-form">
-			<Personal />
-			<Educational />
-			<Practical />
+			<Personal {...props} />
+			<Educational {...props} />
+			<Practical {...props} />
 		</div>
 	);
 }
