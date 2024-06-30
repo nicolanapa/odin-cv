@@ -16,7 +16,11 @@ function SingleForm(props) {
 		<section className="form">
 			<h2>{props.list.header}</h2>
 
-			<form onSubmit={props.variableToCall}>
+			<form
+				onSubmit={() => {
+					props.variableToCall(event, { ...props });
+				}}
+			>
 				{completeList}
 
 				<button>
