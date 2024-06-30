@@ -22,10 +22,10 @@ function inputTaker(idList) {
 	createRoot(whereToReturn).render(<div>1</div>);
 }*/
 
-function PersonSubmit(e, props) {
+function PersonSubmit(props, event) {
 	const idList = ["name", "email", "phone"];
 
-	e.preventDefault();
+	event.preventDefault();
 	console.log("Person");
 	let allValues = inputTaker(idList);
 	console.log(allValues);
@@ -33,10 +33,10 @@ function PersonSubmit(e, props) {
 	props.setPersonValues(allValues);
 }
 
-function EducationSubmit(e, props) {
+function EducationSubmit(props, event) {
 	const idList = ["school", "study", "dateStudy"];
 
-	e.preventDefault();
+	event.preventDefault();
 	console.log("Education");
 	let allValues = inputTaker(idList);
 	console.log(allValues);
@@ -44,10 +44,10 @@ function EducationSubmit(e, props) {
 	props.setEducationValues(allValues);
 }
 
-function PracticSubmit(e, props) {
+function PracticSubmit(props, event) {
 	const idList = ["company", "position", "responsibilities", "dateWorkStart", "dateWorkEnd"];
 
-	e.preventDefault();
+	event.preventDefault();
 	console.log("Practic");
 	let allValues = inputTaker(idList);
 
