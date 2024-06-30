@@ -18,7 +18,7 @@ function SingleForm(props) {
 
 			<form
 				onSubmit={() => {
-					props.variableToCall(event, { ...props });
+					props.variableToCall({ ...props }, event);
 				}}
 			>
 				{completeList}
