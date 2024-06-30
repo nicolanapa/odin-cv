@@ -5,7 +5,7 @@ import React from "react";
 function ShowingPerson(props) {
 	return (
 		<>
-			{props.personValues.name !== undefined && <h2> Personal Information</h2>}
+			{props.personValues.name !== undefined && <h2>Personal Information</h2>}
 			<div className="at-the-angles">
 				<h3>{props.personValues.name}</h3>
 				<p>{props.personValues.email}</p>
@@ -18,7 +18,7 @@ function ShowingPerson(props) {
 function ShowingEducation(props) {
 	return (
 		<>
-			{props.educationValues.school !== undefined && <h2> Education</h2>}
+			{props.educationValues.school !== undefined && <h2>Education</h2>}
 			<h3 className="centered">{props.educationValues.school}</h3>
 			<div className="at-the-angles">
 				<h3>{props.educationValues.study}</h3>
@@ -31,7 +31,7 @@ function ShowingEducation(props) {
 function ShowingPractic(props) {
 	return (
 		<>
-			{props.practicValues.company !== undefined && <h2> Jobs</h2>}
+			{props.practicValues.company !== undefined && <h2>Jobs</h2>}
 			<div className="at-the-angles">
 				<h3>{props.practicValues.company}</h3>
 				<div className="centered">
