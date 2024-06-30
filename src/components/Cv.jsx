@@ -1,5 +1,6 @@
 import React from "react";
 import { ShowingPerson, ShowingEducation, ShowingPractic } from "./Showing.jsx";
+import "../styles/cv.css"
 
 // Use state for input values variables
 
