@@ -36,6 +36,11 @@ function ShowingPractic(props) {
 				<h3>{props.practicValues.company}</h3>
 				<div className="centered">
 					<p>{props.practicValues.dateWorkStart}</p>
+					{props.practicValues.dateWorkStart !== undefined && props.practicValues.dateWorkEnd !== undefined && (
+						<p>
+							&nbsp; <img src="./arrowDates.svg" alt="Arrow indicating the dates" width="22.5px" height="auto" /> &nbsp;
+						</p>
+					)}
 					<p>{props.practicValues.dateWorkEnd}</p>
 				</div>
 			</div>
