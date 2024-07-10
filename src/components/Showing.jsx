@@ -1,6 +1,8 @@
 import React from "react";
 
 // Change h3 / p to input and maybe add little labels
+// Change values directly by calling function for the right section
+// Edit button be something like 0 / 1 to change a tag to input / h3
 
 function ShowingPerson(props) {
 	return (
