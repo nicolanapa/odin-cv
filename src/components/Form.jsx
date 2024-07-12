@@ -17,15 +17,15 @@ function SingleForm(props) {
 			<h2>{props.list.header}</h2>
 
 			<form
-				onSubmit={() => {
+				onChange={() => {
 					props.variableToCall({ ...props }, event);
 				}}
 			>
 				{completeList}
 
-				<button>
+				{/*<button>
 					<img className="submitIcon" src="./submit.svg" alt="Submit" />
-				</button>
+				</button>*/}
 			</form>
 		</section>
 	);
