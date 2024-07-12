@@ -31,8 +31,6 @@ function PersonSubmit(props, event) {
 	console.log(allValues);
 
 	props.setPersonValues(allValues);
-
-	alert("You can change directly the CV by submitting again!");
 }
 
 function EducationSubmit(props, event) {
@@ -44,8 +42,6 @@ function EducationSubmit(props, event) {
 	console.log(allValues);
 
 	props.setEducationValues(allValues);
-
-	alert("You can change directly the CV by submitting again!");
 }
 
 function PracticSubmit(props, event) {
@@ -62,8 +58,6 @@ function PracticSubmit(props, event) {
 	console.log(allValues);
 
 	props.setPracticValues(allValues);
-
-	alert("You can change directly the CV by submitting again!");
 }
 
 export { PersonSubmit, EducationSubmit, PracticSubmit };
