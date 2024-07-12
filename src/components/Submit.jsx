@@ -1,5 +1,4 @@
 import React from "react";
-//import { createRoot } from "react-dom/client";
 
 function inputTaker(idList) {
 	let allValues = {};
@@ -10,17 +9,6 @@ function inputTaker(idList) {
 
 	return allValues;
 }
-
-/*function inputShowing(allValues, whereToReturn) {
-	whereToReturn = document.querySelector("." + whereToReturn);
-
-	for (const [key, value] of Object.entries(allValues)) {
-		let tempCase = key.charAt(0).toUpperCase() + key.slice(1);
-		console.log(tempCase + ": " + value);
-	}
-
-	createRoot(whereToReturn).render(<div>1</div>);
-}*/
 
 function PersonSubmit(props, event) {
 	const idList = ["name", "email", "phone"];
